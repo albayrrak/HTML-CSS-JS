@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+/*================= RESET CSS =====================*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+}
+
+/*================= PAGE CSS =====================*/
+
+.app {
+    width: 100%;
+    height: 100vh;
+    background: #d8e2dc;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0px 0px 10px #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 100px;
+}
+
+.navbar .navbar-logo {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .navbar-logo h4 {
+    font-weight: 500;
+    color: #474747;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.navbar .navbar-logo h4 span {
+    font-weight: 400;
+    color: brown;
+    font-size: 12px;
+}
+
+/* HAMBURGER MENU */
+.navbar .hamburger {
+    width: 45px;
+    height: 45px;
+    background: brown;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px 10px;
+    position: relative;
+}
+
+.navbar .hamburger .hamburger-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.navbar .hamburger .hamburger-line::before {
+    content: " ";
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.5s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.navbar .hamburger .hamburger-line::after {
+    content: " ";
+    position: absolute;
+    transition: 1s all;
+    top: 10px;
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+.navbar .hamburger:hover .hamburger-line::before {
+    width: 25px;
+}
+
+.navbar .hamburger:hover .hamburger-line::after {
+    width: 25px;
+}
+
+.navbar .hamburger .hamburger-line.active {
+    width: 25px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+}
+
+/* TOGGLE MENU */
+.menu {
+    position: relative;
+    left: -300px;
+    height: calc(100vh - 50px);
+    width: 300px;
+    background: #fff;
+    box-shadow: 0 10px 10px #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 25px 50px;
+    transition: 1s all;
+}
+
+.menu.active {
+    position: relative;
+    left: 0px;
+}
+.menu .menu-image {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: red;
+}
+
+.menu .menu-image img {
+    width: 100px;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.menu .menu-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.menu .menu-list span {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menu .menu-list span i {
+    margin-right: 8px;
+    color: #b1b1b1;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.menu .menu-list span i:hover {
+    color: #fff;
+    padding: 10px;
+    background: brown;
+    border-radius: 50%;
+}
+
+.menu .menu-list span a {
+    color: brown;
+}
+
+.menu .menu-search {
+    width: 100%;
+    border: 1px solid #b1b1b1;
+    border-radius: 200px;
+    padding: 5px 15px;
+}
+
+.menu .menu-search input {
+    color: #474747;
+}
