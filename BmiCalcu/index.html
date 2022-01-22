@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>BMI CALCULATOR</title>
+    </head>
+    <body>
+        <div class="app">
+            <div class="calculator">
+                <div class="input">
+                    <label for="">
+                        <h4>Lütfen Boyunuzu Girin</h4>
+                        <input
+                            type="number"
+                            placeholder="Boy...."
+                            id="height"
+                        />
+                    </label>
+                    <label for="">
+                        <h4>Lütfen Kilonuzu Girin</h4>
+                        <input type="number" placeholder="Kg...." id="weight" />
+                    </label>
+                    <label for="">
+                        <button id="hesapla">Gönder</button>
+                    </label>
+                    <div class="result">
+                        <h4>Vücut Kitle Endeksiniz</h4>
+                        <p>22</p>
+                    </div>
+                </div>
+
+                <div class="images" id="images"></div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
