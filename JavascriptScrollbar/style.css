@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("https://miro.medium.com/max/1200/1*KmNOS6wdFjMXBUoFM9GG_w.jpeg"),
+        no-repeat fixed center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #000;
+    opacity: 0.8;
+}
+
+.intro h1 {
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+    padding: 80px;
+}
+
+.content h1 {
+    text-align: center;
+}
+
+.content .content-text {
+    margin: 15px auto;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .content-text .paragraph {
+    opacity: 0;
+    transform: scale(0);
+    transition: 1s ease-in all;
+}
+.content .content-text .paragraph.active {
+    margin-left: 100px;
+    opacity: 1;
+    transform: scale(1.1);
+}
